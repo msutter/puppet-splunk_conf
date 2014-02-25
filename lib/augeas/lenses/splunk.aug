@@ -27,4 +27,7 @@ let lns       = record_anon | record*
 
 let filter    = incl "/opt/splunk/etc/system/local/*.conf"
               . incl "/opt/splunk/etc/apps/*/*/*.conf"
+              . incl "/opt/splunkforwarder/etc/system/local/*.conf"
+              . incl "/opt/splunkforwarder/etc/apps/*/*/*.conf"
+              
 let xfm       = transform lns filter
